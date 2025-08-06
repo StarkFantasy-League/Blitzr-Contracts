@@ -145,7 +145,7 @@ fn test_user_multiple_bets_different_matches() {
 }
 
 #[test]
-#[should_panic(expected: ('Amount must be greater than 0',))]
+#[should_panic(expected: 'Amount must be greater than 0')]
 fn test_create_bet_zero_amount() {
     let (blitzr, _erc20) = setup_test_environment();
     
@@ -154,7 +154,7 @@ fn test_create_bet_zero_amount() {
 }
 
 #[test]
-#[should_panic(expected: ('Match already completed',))]
+#[should_panic(expected: 'Match already completed')]
 fn test_create_bet_completed_match() {
     let (blitzr, _erc20) = setup_test_environment();
     
