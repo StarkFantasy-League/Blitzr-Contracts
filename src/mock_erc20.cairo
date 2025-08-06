@@ -10,7 +10,7 @@ pub trait IMockERC20<TContractState> {
 pub mod MockERC20 {
     use openzeppelin_token::erc20::{ERC20Component, ERC20HooksEmptyImpl};
     use starknet::ContractAddress;
-    
+
     component!(path: ERC20Component, storage: erc20, event: ERC20Event);
 
     // ERC20 Mixin (includes all standard ERC20 functions)
@@ -36,7 +36,7 @@ pub mod MockERC20 {
     fn constructor(ref self: ContractState) {
         let name = "Mock Starknet Token";
         let symbol = "MSTRK";
-        
+
         self.erc20.initializer(name, symbol);
     }
 

@@ -3,16 +3,29 @@ version = 1
 
 [[package]]
 name = "blitzr"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
+ "openzeppelin_access",
+ "openzeppelin_introspection",
  "openzeppelin_token",
  "snforge_std",
 ]
 
 [[package]]
+name = "openzeppelin_access"
+version = "1.0.0"
+source = "registry+https://scarbs.xyz/"
+checksum = "sha256:a39a4ea1582916c637bf7e3aee0832c3fe1ea3a3e39191955e8dc39d08327f9b"
+dependencies = [
+ "openzeppelin_introspection",
+ "openzeppelin_utils",
+]
+
+[[package]]
 name = "openzeppelin_account"
-version = "0.18.0"
-source = "git+https://github.com/OpenZeppelin/cairo-contracts?tag=v0.18.0#2f37306b490e63c0afa9e33ad192ba428141b487"
+version = "1.0.0"
+source = "registry+https://scarbs.xyz/"
+checksum = "sha256:7e943a2de32ddca4d48e467e52790e380ab1f49c4daddbbbc4634dd930d0243f"
 dependencies = [
  "openzeppelin_introspection",
  "openzeppelin_utils",
@@ -20,14 +33,17 @@ dependencies = [
 
 [[package]]
 name = "openzeppelin_introspection"
-version = "0.18.0"
-source = "git+https://github.com/OpenZeppelin/cairo-contracts?tag=v0.18.0#2f37306b490e63c0afa9e33ad192ba428141b487"
+version = "1.0.0"
+source = "registry+https://scarbs.xyz/"
+checksum = "sha256:34e088ecf19e0b3012481a29f1fbb20e600540cb9a5db1c3002a97ebb7f5a32a"
 
 [[package]]
 name = "openzeppelin_token"
-version = "0.18.0"
-source = "git+https://github.com/OpenZeppelin/cairo-contracts?tag=v0.18.0#2f37306b490e63c0afa9e33ad192ba428141b487"
+version = "1.0.0"
+source = "registry+https://scarbs.xyz/"
+checksum = "sha256:33fcb84a1a76d2d3fff9302094ff564f78d45b743548fd7568c130b272473f66"
 dependencies = [
+ "openzeppelin_access",
  "openzeppelin_account",
  "openzeppelin_introspection",
  "openzeppelin_utils",
@@ -35,18 +51,19 @@ dependencies = [
 
 [[package]]
 name = "openzeppelin_utils"
-version = "0.18.0"
-source = "git+https://github.com/OpenZeppelin/cairo-contracts?tag=v0.18.0#2f37306b490e63c0afa9e33ad192ba428141b487"
+version = "1.0.0"
+source = "registry+https://scarbs.xyz/"
+checksum = "sha256:fd348b31c4a4407add33adc3c2b8f26dca71dbd7431faaf726168f37a91db0c1"
 
 [[package]]
 name = "snforge_scarb_plugin"
-version = "0.32.0"
-source = "git+https://github.com/foundry-rs/starknet-foundry?tag=v0.32.0#3817c903b640201c72e743b9bbe70a97149828a2"
+version = "0.41.0"
+source = "git+https://github.com/foundry-rs/starknet-foundry?tag=v0.41.0#d6589e67bd93fbc604560d49566a79ca951e195a"
 
 [[package]]
 name = "snforge_std"
-version = "0.32.0"
-source = "git+https://github.com/foundry-rs/starknet-foundry?tag=v0.32.0#3817c903b640201c72e743b9bbe70a97149828a2"
+version = "0.41.0"
+source = "git+https://github.com/foundry-rs/starknet-foundry?tag=v0.41.0#d6589e67bd93fbc604560d49566a79ca951e195a"
 dependencies = [
  "snforge_scarb_plugin",
 ]
